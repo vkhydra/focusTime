@@ -74,9 +74,13 @@ export function ChallengesProvider({
     new Audio("/notification.mp3").play();
 
     if (Notification.permission === "granted") {
-      new Notification("Novo Desafio 🎉", {
-        body: `Valendo ${challenge.amount}XP!`,
-      });
+      try {
+        new Notification("Novo Desafio 🎉", {
+          body: `Valendo ${challenge.amount}XP!`,
+        });
+      } catch {
+        console.log("without notification");
+      }
     }
   }
 
