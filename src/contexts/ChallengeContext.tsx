@@ -81,7 +81,7 @@ export function ChallengesProvider({
     //   } catch {
     //     console.log("without notification");
     //   }
-    // }
+    // }  
   }
 
   function resetChallenge() {
